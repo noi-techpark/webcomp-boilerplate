@@ -40,6 +40,8 @@ pipeline {
             steps {
                 ansiColor('xterm') {
                     sshagent (credentials: ['jenkins_github_ssh_key']) {
+                        sh 'git config --global user.email "info@opendatahub.bz.it"'
+                        sh 'git config --global user.name "Jenkins"'
                         sh 'git remote set-url origin ${GIT_REPOSITORY}'
                         sh 'git add -A'
                         sh 'git commit -m "Verion ${VERSION}"'
