@@ -21,7 +21,7 @@ ToDo: Description of the project.
 
 ## Usage
 
-ToDo: Include the Javascript file `dist/webcomp-boilerplate.min.js` in your HTML and define the web component like this:
+ToDo: Include the webcompscript file `dist/webcomp-boilerplate.min.js` in your HTML and define the web component like this:
 
 ```html
 <webcomp-boilerplate xxx="test" yyy="2"></webcomp-boilerplate>
@@ -177,7 +177,7 @@ More documentation can be found at [https://opendatahub.readthedocs.io/en/latest
 
 ### Boilerplate
 
-The project uses this boilerplate: [https://github.com/noi-techpark/java-boilerplate](https://github.com/noi-techpark/webcomp-boilerplate).
+The project uses this boilerplate: [https://github.com/noi-techpark/webcomp-boilerplate](https://github.com/noi-techpark/webcomp-boilerplate).
 
 ### License
 
