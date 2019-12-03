@@ -1,0 +1,12 @@
+{
+  "name": "webcomp-boilerplate",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "...",
+    "build": "...",
+    "lint": "...",
+    "test": "..."
+  }
+}

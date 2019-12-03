@@ -1,0 +1,27 @@
+{
+  "title": "Webcomponent Boilerplate",
+  "description": "A webcomponent boilerplate that can be used to build your own boilerplate.",
+  "descriptionAbstract": "A webcomponent boilerplate",
+  "license": "AGPL-3.0",
+  "repositoryUrl": "https://github.com/noi-techpark/webcomp-boilerplate",
+  "authors": [
+    {
+      "name": "NOI",
+      "email": "info@noi.bz.it",
+      "organization": "NOI S.p.A",
+      "organizationUrl": "https://noi.bz.it"
+    }
+  ],
+  "image": null,
+  "searchTags": [],
+  "dist": {
+    "basePath": "dist",
+    "files": [
+      "app.min.js"
+    ]
+  },
+  "configuration": {
+    "tagName": "webcomponent-boilerplate",
+    "options": []
+  }
+}
