@@ -3,11 +3,12 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: infrastructure/docker/node.dockerfile
     volumes:
       - ./:/code
     working_dir: /code
-    command: npm run start
+    command: sh -c "test -d node_modules || yarn; yarn start"
+    command: sh -c "test -d node_modules || npm install; npm run start"
     ports:
-      - "8080:8080"
+      - "8999:8080"
     tty: true
