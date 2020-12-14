@@ -13,8 +13,8 @@ pipeline {
     }
     environment {
         // Web Components' default variables
-        WC_GIT_REMOTE = GIT_BRANCH.split("/")[0]
-        WC_GIT_BRANCH = GIT_BRANCH.split("/")[1]
+        WC_GIT_REMOTE = get_git_remote()
+        WC_GIT_BRANCH = get_git_branch()
         WC_DIST_PATH = "dist"
 
         // Your environmental variables
@@ -84,4 +84,15 @@ pipeline {
             }
         }
     }
+}
+
+
+
+// Helper functions
+def get_git_remote() {
+    return env.GIT_BRANCH.split('/')[0]
+}
+
+def get_git_branch() {
+    return env.GIT_BRANCH.split('/')[1]
 }
