@@ -10,7 +10,7 @@ Replace all `ToDo` notes in this file and adjust also the following files:
 
 # ToDo: Project Name
 
-ToDo: Description of the project.
+ToDo: Description of the project. What does this web component provide? Which data of the Open Data Hub will be shown? Why is it sooo coool ;-)
 
 ## Table of contents
 
@@ -157,7 +157,7 @@ docker-compose run --rm app /bin/bash -c "npm run test"
 
 ### Support
 
-ToDo: For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
+For support, please contact [help@opendatahub.bz.it](mailto:help@opendatahub.bz.it).
 
 ### Contributing
 
