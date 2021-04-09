@@ -25,10 +25,16 @@
     "basePath": "dist",
     "files": [
       "app.min.js"
+    ],
+    "scripts": [
+      {
+        "file": "odh-this-repos-name-without-webcomp.min.js",
+        "parameter": ""
+      }
     ]
   },
   "configuration": {
-    "tagName": "webcomponent-boilerplate",
+    "tagName": "odh-this-repos-name-without-webcomp",
     "options": []
   }
 }
