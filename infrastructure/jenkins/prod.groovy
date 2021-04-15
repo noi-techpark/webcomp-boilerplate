@@ -2,17 +2,15 @@ pipeline {
 	agent any
 	environment {
 		DOCKER_IMAGE = "755952719952.dkr.ecr.eu-west-1.amazonaws.com/webcompbuild:latest"
+		WC_GIT_REMOTE = get_git_remote()
+		WC_GIT_BRANCH = get_git_branch()
+		// TODO: Put your environmental variables here
 	}
 	options {
 		ansiColor('xterm')
 	}
 	parameters {
 		string(name: 'VERSION', defaultValue: '1.0.0', description: 'Version (without a leading "v")', trim: true)
-	}
-	environment {
-		WC_GIT_REMOTE = get_git_remote()
-		WC_GIT_BRANCH = get_git_branch()
-		// TODO: Put your environmental variables here
 	}
 	// TODO: Delete either all yarn or all npm scripts
 	stages {
