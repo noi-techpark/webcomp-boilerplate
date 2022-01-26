@@ -1,28 +1,24 @@
-# TODO: Delete either yarn or npm section
+#version 1.0
 name: CI
-on: [push]
+
+on: push
+
+
 jobs:
   build:
-    name: Test
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v1
-# NPM
+      - uses: actions/checkout@v2 
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          cache: 'npm'
-      - run: npm install
-      - run: npm test
-#YARN
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: test # will run `yarn test` command
+          node-version: '16.x'
+          cache: 'npm' # or yarn
+
+      - name: install
+        run: npm install # or yarm
+
+      - name: build
+        run: npm run build # or yarn
+      
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v1
