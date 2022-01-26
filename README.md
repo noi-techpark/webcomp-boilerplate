@@ -11,6 +11,7 @@ Replace all `ToDo` notes in this file and adjust also the following files:
 # ToDo: Project Name
 
 [![REUSE status](https://api.reuse.software/badge/github.com/noi-techpark/webcomp-boilerplate)](https://api.reuse.software/info/github.com/noi-techpark/webcomp-boilerplate)
+[![CI](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/ci.yml)
 
 ToDo: Description of the project. What does this web component provide? Which data of the Open Data Hub will be shown? Why is it sooo coool ;-)
 
