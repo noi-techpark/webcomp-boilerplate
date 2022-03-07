@@ -1,0 +1,59 @@
+name: CI/CD
+
+on:
+  push:
+  pull_request:
+
+env:
+  NODE_VERSION: 16.x
+
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: noi-techpark/github-actions/npm-build@v2
+        with:
+          build-command: npm run build
+          node-version: ${{env.NODE_VERSION}}
+
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v1
+
+  deploy-test:
+    runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    concurrency: deploy-test
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: noi-techpark/github-actions/npm-build@v2
+        with:
+          build-command: npm run build
+          node-version: ${{env.NODE_VERSION}}
+
+      - uses: noi-techpark/github-actions/webcomp-push@v2
+        with:
+          keycloak-secret: ${{secrets.WCSTORE_CLI_KEYCLOAK_SECRET_TEST}}
+          version-tag: ${{github.sha}}
+
+  deploy-prod:
+    runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/prod'
+    needs: test
+    concurrency: deploy-prod
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: noi-techpark/github-actions/npm-build@v2
+        with:
+          build-command: npm run build
+          node-version: ${{env.NODE_VERSION}}
+
+      - uses: noi-techpark/github-actions/webcomp-push@v2
+        with:
+          keycloak-secret: ${{secrets.WCSTORE_CLI_KEYCLOAK_SECRET_PROD}}
+          version-tag: ${{github.sha}}
+          production: "true"
