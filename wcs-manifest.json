@@ -3,6 +3,7 @@
   "description": "TODO: A webcomponent boilerplate that can be used to build your own boilerplate.",
   "descriptionAbstract": "TODO: A webcomponent boilerplate",
   "license": "AGPL-3.0-or-later",
+  "repositoryUrl": "TODO: https://github.com/noi-techpark/webcomp-boilerplate.git",
   "copyrightHolders": [
     {
       "name": "NOI",
