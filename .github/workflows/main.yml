@@ -41,7 +41,7 @@ jobs:
 
   deploy-prod:
     runs-on: ubuntu-20.04
-    if: github.ref == 'refs/heads/prod'
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: test
     concurrency: deploy-prod
     steps:
@@ -55,5 +55,5 @@ jobs:
       - uses: noi-techpark/github-actions/webcomp-push@v2
         with:
           keycloak-secret: ${{secrets.WCSTORE_CLI_KEYCLOAK_SECRET_PROD}}
-          version-tag: ${{github.sha}}
+          version-tag: ${{github.ref_name}}
           production: "true"
