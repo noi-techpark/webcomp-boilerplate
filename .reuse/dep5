@@ -3,22 +3,10 @@ Upstream-Name: webcomp-boilerplate
 Upstream-Contact: Peter Moser <p.moser@noi.bz.it>
 Source: https://github.com/noi-techpark/webcomp-boilerplate
 
-Files: src/*
-Copyright: 2021 Peter Moser <p.moser@noi.bz.it>
+Files: src/* work/* odh-*.js
+Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
 License: AGPL-3.0-or-later
 
-Files: src/*.md src/*.txt .env.*
-Copyright: 2021 Peter Moser <p.moser@noi.bz.it>
-License: CC0-1.0
-
-Files: infrastructure/*
-Copyright: 2021 Peter Moser <p.moser@noi.bz.it>
-License: CC0-1.0
-
-Files: .editorconfig .gitignore README.md docker-compose.yml package.json wcs-manifest.json
-Copyright: 2021 Peter Moser <p.moser@noi.bz.it>
-License: CC0-1.0
-
-Files: .github/workflows/ci.yml
-Copyright: (c) 2022 Simon Dalvai <s.dalvai@noi.bz.it>
+Files: infrastructure/* .editorconfig .gitignore *.md *.txt .env.* *.yml *.json webpack.* wcs-logo.png
+Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
 License: CC0-1.0
