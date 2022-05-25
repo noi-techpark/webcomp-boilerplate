@@ -2,7 +2,7 @@ Replace all `ToDo` notes in this file and adjust also the following files:
 - package.json:
     - Adjust the general parts like name, description, ...
     - Adjust the scripts `npm run start`, `npm run build`, `npm run lint` and
-      `npm run test` or change them if you use `yarn` for instance
+      `npm run test`
 - wcs-manifest.json:
     - Adjust the general parts like title, description, ...
     - Adjust the configuration part with all possible configuration options
