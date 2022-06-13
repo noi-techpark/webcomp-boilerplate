@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v1
+
       - uses: noi-techpark/github-actions/npm-build@v2
         with:
           build-command: npm run build
           node-version: ${{env.NODE_VERSION}}
-
-      - name: REUSE Compliance Check
-        uses: fsfe/reuse-action@v1
 
   deploy-test:
     runs-on: ubuntu-20.04
