@@ -9,5 +9,62 @@ services:
     working_dir: /code
     command: sh -c "test -d node_modules || npm install; npm run start"
     ports:
-      - "8999:8080"
+      - "${APP_PORT}:8080"
     tty: true
+
+  frontend:
+    container_name: wcstore_frontend
+    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-frontend:latest
+    environment:
+      HOST: 0.0.0.0
+    env_file: .env
+    ports:
+      - "${FRONTEND_PORT}:3000"
+    tty: true
+
+  api:
+    container_name: wcstore_api
+    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-api:latest
+    volumes:
+      - ./workspace:/workspace
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    ports:
+      - "${API_SERVER_PORT}:${API_SERVER_PORT}"
+    tty: true
+
+  cdn:
+    container_name: wcstore_cdn
+    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cdn:latest
+    volumes:
+      - ./workspace:/workspace
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    ports:
+      - "${CDN_SERVER_PORT}:${CDN_SERVER_PORT}"
+    tty: true
+
+  postgres:
+    container_name: wcstore_postgres
+    image: postgres:13
+    ports:
+      - "5555:5432"
+    environment:
+      POSTGRES_USER: wcs
+      POSTGRES_PASSWORD: wcs
+      POSTGRES_DB: wcs
+
+  wcstore-cli:
+    container_name: wcstore-cli
+    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cli:latest
+    env_file: .env
+    command: ./wait-for -t 0 api:${API_SERVER_PORT} -- python webcompstore-cli.py --push ${WC_VERSION}
+    depends_on:
+      - api
+    volumes:
+      - ./:/webcomponent
+

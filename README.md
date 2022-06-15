@@ -15,14 +15,30 @@ Replace all `ToDo` notes in this file and adjust also the following files:
 
 ToDo: Description of the project. What does this web component provide? Which data of the Open Data Hub will be shown? Why is it sooo coool ;-)
 
-## Table of contents
-
-- [Usage](#usage)
-- [Gettings started](#getting-started)
-- [Tests and linting](#tests-and-linting)
-- [Deployment](#deployment)
-- [Docker environment](#docker-environment)
-- [Information](#information)
+- [ToDo: Project Name](#todo-project-name)
+  - [Usage](#usage)
+    - [Attributes](#attributes)
+      - [xxxx](#xxxx)
+      - [yyy](#yyy)
+  - [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Source code](#source-code)
+    - [Dependencies](#dependencies)
+    - [Build](#build)
+  - [Tests and linting](#tests-and-linting)
+  - [Deployment](#deployment)
+  - [Run with docker](#run-with-docker)
+    - [Installation](#installation)
+    - [Start the docker containers](#start-the-docker-containers)
+    - [Publish a new version of your webcomponent](#publish-a-new-version-of-your-webcomponent)
+    - [Stop the docker containers](#stop-the-docker-containers)
+    - [Delete your webcomponents from the store](#delete-your-webcomponents-from-the-store)
+  - [Information](#information)
+    - [Support](#support)
+    - [Contributing](#contributing)
+    - [Documentation](#documentation)
+    - [Boilerplate](#boilerplate)
+    - [License](#license)
 
 ## Usage
 
@@ -110,75 +126,38 @@ To create the distributable files, execute the following command:
 npm run build
 ```
 
-## Docker environment
+## Run with docker
 
-For the project a Docker environment is already prepared and ready to use with all necessary prerequisites.
-
-These Docker containers are the same as used by the continuous integration servers.
+If you want to test the webcomponent on a local instance of the [webcomponent store](https://webcomponents.opendatahub.com/) to make sure that it will run correctly also on the real store.
+You can also access the webcomponent running in a simple separated docker container outside of the store.
 
 ### Installation
 
 Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine.
 
-### Dependenices
+### Start the docker containers
+- Create a .env file: <br>
+  `cp .env.example .env`
+- [Optional] Adjust port numbers in .env if they have conflicts with services already running on your machine
+- Start the store with: <br>
+  `docker-compose up -d`
+- Wait until the containers are running. You can check the current state with: <br>
+  `docker-compose logs --tail 500 -f`
+- Access the store in your browser on: <br>
+  `localhost:8999`
+- Access webcomponent running in separated docker in your browser on: <br>
+  `localhost:8998`
 
-First, install all dependencies:
-
-```bash
-docker-compose run --rm app /bin/bash -c "npm install"
-```
-
-### Start and stop the containers
-
-Before start working you have to start the Docker containers:
-
-```
-docker-compose up --build --detach
-```
-
-After finished working you can stop the Docker containers:
-
-```
-docker-compose stop
-```
-
-### Running commands inside the container
-
-When the containers are running, you can execute any command inside the environment. Just replace the dots `...` in the following example with the command you wish to execute:
-
-```bash
-docker-compose run --rm app /bin/bash -c "..."
-```
-
-Some examples are:
-
-```bash
-docker-compose run --rm app /bin/bash -c "npm run test"
-```
-
-## Test with a local webcomponent store
-
-To test your webcomponent locally you can start an instance of the webcomponent store on your local machine and deploy your created webcomponent to it.
-
-To start it follow these steps:
-- `cd wcstore`
-- `cp .env.example .env`
-- Adjust .env with your values for WC_PATH (the absolute path of you webcomponent)
-- Adjust ports in .env if they have conflicts with services already running on your machine
-- `docker-compose up -d`
-- Wait until the containers are running. You can check the current state with
-  `docker-compose logs --tail 400 -f`
-  (or simply wait until your computer fan gets silent again ;-) )
-- Access the store on `localhost:8999` (or the port you defined) and you'll see your webcomponent
-
-To publish a new version of your webcomponent:
+### Publish a new version of your webcomponent
 - Increase version number WC_VERSION in your .env file
 - Then run: `docker-compose up wcstore-cli`
 
-To stop and delete everything:
-- `cd wcstore`
+### Stop the docker containers
 - `docker-compose stop`
-- in case you want to delete your test do `[sudo] rm -f workspace` and `docker-compose rm -f -v postgres`
+
+### Delete your webcomponents from the store
+- `[sudo] rm -f workspace`
+- `docker-compose rm -f -v postgres`
 
 
 ## Information
