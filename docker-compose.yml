@@ -11,7 +11,6 @@ services:
     tty: true
 
   frontend:
-    container_name: wcstore_boilerplate_frontend
     image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-frontend:latest
     environment:
       HOST: 0.0.0.0
@@ -21,7 +20,6 @@ services:
     tty: true
 
   api:
-    container_name: wcstore_boilerplate_api
     image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-api:latest
     volumes:
       - ./workspace:/workspace
@@ -34,7 +32,6 @@ services:
     tty: true
 
   cdn:
-    container_name: wcstore_boilerplate_cdn
     image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cdn:latest
     volumes:
       - ./workspace:/workspace
@@ -47,7 +44,6 @@ services:
     tty: true
 
   postgres:
-    container_name: wcstore_boilerplate_postgres
     image: postgres:13
     ports:
       - "5555:5432"
@@ -57,7 +53,6 @@ services:
       POSTGRES_DB: wcs
 
   wcstore-cli:
-    container_name: wcstore_boilerplate_cli
     image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cli:latest
     env_file: .env
     command: ./wait-for -t 0 api:${API_SERVER_PORT} -- python webcompstore-cli.py --push ${WC_VERSION}
