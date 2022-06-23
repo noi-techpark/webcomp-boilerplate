@@ -377,7 +377,9 @@ ex :  `npm run build`
 - Access the store in your browser on: <br>
   `localhost:8999`
 
-#### Publish a new version of your webcomponent
+Note: If you only want to start the webcomponent in the separated docker container without the webcomponent store, simply run `docker-compose up app -d`
+
+### Publish a new version of your webcomponent
 - Increase version number WC_VERSION in your .env file
 - Then run: `docker-compose up wcstore-cli`
 
@@ -389,7 +391,7 @@ ex :  `npm run build`
 
 #### Delete your webcomponents from the store
 - `[sudo] rm -f workspace`
-- `docker-compose rm -f -v postgres`
+- `docker-compose down`
 
 # Test if your webcomp will run in the webcomp store
 The last step is to test if your web component will run on the Open Data Hub webcomponent store. This is a very important step, because we will not accept web components that won't work on our store.<br>
