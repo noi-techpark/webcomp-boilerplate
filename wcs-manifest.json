@@ -1,7 +1,7 @@
 {
-  "title": "TODO: Webcomponent Boilerplate",
-  "description": "TODO: A webcomponent boilerplate that can be used to build your own boilerplate.",
-  "descriptionAbstract": "TODO: A webcomponent boilerplate",
+  "title": "Hello-world",
+  "description": "Hello world simple webcomp example",
+  "descriptionAbstract": "Hello world simple webcomp example",
   "license": "AGPL-3.0-or-later",
   "repositoryUrl": "TODO: https://github.com/noi-techpark/webcomp-boilerplate.git",
   "copyrightHolders": [
@@ -14,28 +14,34 @@
   ],
   "authors": [
     {
-      "name": "your-name-or-company",
+      "name": "...",
       "email": "...",
       "organization": "...",
       "organizationUrl": "..."
     }
   ],
-  "image": null,
+  "image": "wcs-logo.png",
   "searchTags": [],
   "dist": {
     "basePath": "dist",
     "files": [
-      "app.min.js"
+      "main.js"
     ],
     "scripts": [
-      {
-        "file": "odh-this-repos-name-without-webcomp.min.js",
-        "parameter": ""
-      }
     ]
   },
   "configuration": {
-    "tagName": "odh-this-repos-name-without-webcomp",
-    "options": []
+    "tagName": "hello-world",
+    "options": [
+      {
+        "key": "title",
+        "type": "text",
+        "label": "title of the web-comp",
+        "required": false,
+        "options": {
+          "default": "hello-world"
+        }
+      }
+    ]
   }
 }

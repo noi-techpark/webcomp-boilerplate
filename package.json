@@ -1,12 +1,9 @@
 {
-  "name": "webcomp-boilerplate",
+  "name": "webcomp-boilerplate-helloworld",
   "private": true,
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "...",
-    "build": "...",
-    "lint": "...",
-    "test": "..."
+    "build": "webpack"
   }
 }
