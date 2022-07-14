@@ -56,9 +56,9 @@ A manifest file should look like this:
 
 ```diff
     {
-    + "title": "Title of your webcomponent",
-    + "description": "Description of your webcomponent",
-    + "descriptionAbstract": "Small description of your webcomponent",
++   "title": "Title of your webcomponent",
++   "description": "Description of your webcomponent",
++   "descriptionAbstract": "Small description of your webcomponent",
     "license": "AGPL-3.0-or-later",
     "copyrightHolders": [
         {
@@ -68,7 +68,7 @@ A manifest file should look like this:
         "organizationUrl": "https://noi.bz.it"
         }
     ],
-    + "authors": [
++   "authors": [
         {
         "name": "your-name-or-company",
         "email": "...",
@@ -79,14 +79,14 @@ A manifest file should look like this:
 
     //these files will be used by the docker
 
-    + "image": "wcs-logo.png", 
++   "image": "wcs-logo.png", 
     //A screenshot of the webcomponent that will be used as a thumbnail in the webcomponent store front-page. The filename should be “wcs-logo.png” and it should be placed in the image tag of the wcs-manifest.json like “image”: “wcs-logo.png”
     
     "searchTags": [],
     "dist": {
         "basePath": "dist", // folder where the bundle js generated from webpack will be 
         "files": [
-    +   "app.min.js" //file js generated from the webpack NOTE: Change the file name to yours
++          "app.min.js" //file js generated from the webpack NOTE: Change the file name to yours
         ],
         "scripts": [ //this section is optional
         {
@@ -96,13 +96,13 @@ A manifest file should look like this:
         ]
     },
     "configuration": {
-    +    "tagName": "name of your webcomp tag",
++    "tagName": "name of your webcomp tag",
         "options": []
     }
     }
 ```
 
-- The configuration section of the manifest is needed for the configurator to know what options to include.
+- The **configuration** section of the manifest is needed for the configurator to know what options to include.
 Here are some examples of what a configuration may include:
 
     <details>
