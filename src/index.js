@@ -50,7 +50,7 @@ class HelloWorld extends HTMLElement {
         this.shadow.innerHTML = `
             <style> 
                 h1 {
-                    color: black; 
+                    color: red; 
                 } 
             </style>
             <h1>

@@ -25,7 +25,7 @@
   "dist": {
     "basePath": "dist",
     "files": [
-      "main.js"
+      "main.min.js"
     ],
     "scripts": [
     ]
