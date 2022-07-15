@@ -7,6 +7,6 @@ Files: src/* work/* odh-*.js
 Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
 License: AGPL-3.0-or-later
 
-Files: infrastructure/* .editorconfig .gitignore *.md *.txt .env.* *.yml *.json webpack.* wcs-logo.png
+Files: infrastructure/* .editorconfig .gitignore *.md *.txt .env.* *.yml *.json webpack.* wcs-logo.png public/index.html
 Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
 License: CC0-1.0
