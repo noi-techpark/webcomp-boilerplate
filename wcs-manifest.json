@@ -25,7 +25,7 @@
   "dist": {
     "basePath": "dist",
     "files": [
-      "main.js"
+      "webcomp-boilerplate.min.js"
     ],
     "scripts": [
     ]

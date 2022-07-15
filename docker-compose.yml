@@ -1,15 +1,13 @@
 version: "3"
 services:
   app:
-    build:
-      context: .
-      dockerfile: infrastructure/docker/node.dockerfile
+    image: node:14.15
     volumes:
       - ./:/code
     working_dir: /code
-    command: sh -c "test -d node_modules || npm install "
+    command: sh -c "test -d node_modules || npm install; npm run start"
     ports:
-      - "${APP_PORT}:8080"
+      - "${APP_PORT}:8998"
     tty: true
 
   frontend:

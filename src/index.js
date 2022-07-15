@@ -3,11 +3,11 @@ class HelloWorld extends HTMLElement {
     constructor() {
         super();
 
-        // We need an encapsulation of our component to not 
-        // interfer with the host, nor be vulnerable to outside 
+        // We need an encapsulation of our component to not
+        // interfer with the host, nor be vulnerable to outside
         // changes --> Solution = SHADOW DOM
         this.shadow = this.attachShadow(
-            {mode: "open"}    // Set mode to "open", to have access to 
+            {mode: "open"}    // Set mode to "open", to have access to
                               // the shadow dom from inside this component
         );
     }
@@ -19,7 +19,7 @@ class HelloWorld extends HTMLElement {
         return ['title'];
     }
 
-    // Override from HTMLElement 
+    // Override from HTMLElement
     // Do not use setters here, because you might end up with an endless loop
     attributeChangedCallback(propName, oldValue, newValue) {
         console.log(`Changing "${propName}" from "${oldValue}" to "${newValue}"`);
@@ -48,10 +48,10 @@ class HelloWorld extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = `
-            <style> 
+            <style>
                 h1 {
-                    color: black; 
-                } 
+                    color: red;
+                }
             </style>
             <h1>
                 ${this.title}
