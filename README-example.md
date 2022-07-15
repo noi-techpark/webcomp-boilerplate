@@ -7,6 +7,7 @@
 
 ToDo: Description of the project. What does this web component provide? Which data of the Open Data Hub will be shown? Why is it sooo coool ;-)
 
+- [Replace all `ToDo` notes in this file to create the README of your webcomponent!](#replace-all-todo-notes-in-this-file-to-create-the-readme-of-your-webcomponent)
 - [ToDo: Project Name](#todo-project-name)
   - [Usage](#usage)
     - [Attributes](#attributes)
@@ -123,7 +124,7 @@ npm run build
 If you want to test the webcomponent on a local instance of the [webcomponent store](https://webcomponents.opendatahub.com/) to make sure that it will run correctly also on the real store.
 You can also access the webcomponent running in a simple separated docker container outside of the store.
 
-If you have already developed your webcomponent and now want to test it on a local instance of the store, just copy `.env.example`, `docker-compose.yml`, `wcs-manifest.json` and `infrastructure/docker` into your root folder. Adjust your `package.json` and `wcs-manifest.json` files as described on the top of this readme. Then follow the instructions below. 
+If you have already developed your webcomponent and now want to test it on a local instance of the store, just copy `.env.example`, `docker-compose.yml`, `wcs-manifest.json` and `infrastructure/docker` into your root folder. Adjust your `package.json` and `wcs-manifest.json` files as described on the top of this readme. Then follow the instructions below.
 
 For accessing the webcomponent in a separated docker in the browser you will need a server (e.g. webpack dev-server) that is hosting a page which includes the webcomponent tag, as well as the script defining it. This page needs to be hosted on port 8080 as specified in your docker-compose file.
 
@@ -167,18 +168,16 @@ For support, please contact [help@opendatahub.bz.it](mailto:help@opendatahub.bz.
 If you'd like to contribute, please follow the following instructions:
 
 - Fork the repository.
-
-- Checkout a topic branch from the `development` branch.
-
+- Checkout a topic branch from the `main` branch.
 - Make sure the tests are passing.
+- Create a pull request against the `main` branch.
 
-- Create a pull request against the `development` branch.
-
-A more detailed description can be found here: [https://github.com/noi-techpark/documentation/blob/master/contributors.md](https://github.com/noi-techpark/documentation/blob/master/contributors.md).
+A more detailed description have a look at our [Getting Started
+Guide](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started).
 
 ### Documentation
 
-More documentation can be found at [https://opendatahub.readthedocs.io/en/latest/index.html](https://opendatahub.readthedocs.io/en/latest/index.html).
+More documentation can be found at [https://docs.opendatahub.com](https://docs.opendatahub.com).
 
 ### Boilerplate
 

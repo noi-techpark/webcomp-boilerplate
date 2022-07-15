@@ -4,29 +4,32 @@
 The webcomponent Boilerplate is the start to your project, and it contains a hello-world webcomp to show you how a basic one works and to give you a little help to start your amazing new webcomponent!
 This guide will aid you in the process of creating a valid web-component that has all the requisites necessary to be uploaded on the Open Data Hub Store.
 
+**Table of Contents**
+- [Webcomponent Boilerplate](#webcomponent-boilerplate)
 - [Create](#create)
-    - [Prequisites](#prerequisites)
-    - [Start from the web-component boilerplate](#start-from-the-web-component-boilerplate)
-    - [Modify the file wcs-manifest.json](#modify-the-file-wcs-manifestjson)
-    - [Create in SRC folder](#create-in-src-folder)
+  - [Prerequisites](#prerequisites)
+  - [Start from the web-component boilerplate](#start-from-the-web-component-boilerplate)
+  - [Modify the file wcs-manifest.json](#modify-the-file-wcs-manifestjson)
+  - [Create in SRC folder](#create-in-src-folder)
 - [Test the webcomponent](#test-the-webcomponent)
-    - [Installing Webpack](#installing-webpack)
-        - [Basic Setup](#basic-setup)
-        - [Creating a bundle](#creating-a-bundle)
-        - [Package.json](#packagejson-1)
-    - [Installing Docker](#installing-docker)
-        - [The docker containers](#the-docker-containers)
-            - [Publish a new version of your webcomponent](#publish-a-new-version-of-your-webcomponent)
-            - [Stop the docker containers](#stop-the-docker-containers)
-            - [Delete your webcomponents from the store](#delete-your-webcomponents-from-the-store)
+  - [Installing Webpack](#installing-webpack)
+    - [Basic Setup](#basic-setup)
+    - [Creating a bundle](#creating-a-bundle)
+    - [Modify the Package.json](#modify-the-packagejson)
+  - [Installing Docker](#installing-docker)
+    - [The docker containers](#the-docker-containers)
+      - [START:](#start)
+      - [Publish a new version of your webcomponent](#publish-a-new-version-of-your-webcomponent)
+      - [Stop the docker containers](#stop-the-docker-containers)
+      - [Delete your webcomponents from the store](#delete-your-webcomponents-from-the-store)
 - [Test if your webcomp will run in the webcomp store](#test-if-your-webcomp-will-run-in-the-webcomp-store)
-    - [Test in a local docker instance of the webcomponent store](#test-in-a-local-docker-instance-of-the-webcomponent-store)
+  - [Test in a local docker instance of the webcomponent store](#test-in-a-local-docker-instance-of-the-webcomponent-store)
 - [Last Steps](#last-steps)
 - [Final requirements for submission](#final-requirements-for-submission)
-    - [Submission](#submission)
-- [Support](#support)
+  - [Submission](#submission)
+    - [Support](#support)
 
-# Create  
+# Create
 ## Prerequisites
 To build the project, the following must have been installed in your local machine:
 - Node 12/ NPM 6
@@ -34,10 +37,10 @@ To build the project, the following must have been installed in your local machi
 - Docker
 
 ## Start from the web-component boilerplate
-You'll have to start from the boilerplate made available by the noi-tech park on GitHub [here](https://github.com/noi-techpark/webcomp-boilerplate). 
-Before beginning check out how to contribute to the Noi GitHUb [here](https://github.com/noi-techpark/documentation/blob/main/contributors.md).
+You'll have to start from the boilerplate made available by the NOI Techpark on GitHub [here](https://github.com/noi-techpark/webcomp-boilerplate).
+Before beginning check out how to contribute to the Noi GitHUb [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started).
 - Fork the repository
-- Checkout a topic branch from the development branch.
+- Checkout a topic branch from the `main` branch.
 - Then ask the customer care ([help@opendatahub.com](mailto:help@opendatahub.com)) for a repository for your project, that will be the repository to which you'll make the pull request to.
 
 In the boilerplate it's integrated an hello world webcomponent ready to use. If you have the prerequisites installed to run the hello world you'll have to just use these three commands in the powershell terminal:
@@ -51,7 +54,7 @@ Then in your browser in `localhost:8999` you'll see the hello world component in
 To register with the web components hub a wcs-manifest.json file must be in your repository's root directory. <br>
 Please look attentively at what you should customize for your project<br>
 - Adjust the general parts like title, description, your license,the authors section,image,searchTags,the name of the js file generated from webpack(more info about it later),the configuration section
-   
+
 A manifest file should look like this:
 
 ```diff
@@ -79,12 +82,12 @@ A manifest file should look like this:
 
     //these files will be used by the docker
 
-+   "image": "wcs-logo.png", 
++   "image": "wcs-logo.png",
     //A screenshot of the webcomponent that will be used as a thumbnail in the webcomponent store front-page. The filename should be “wcs-logo.png” and it should be placed in the image tag of the wcs-manifest.json like “image”: “wcs-logo.png”
-    
+
     "searchTags": [],
     "dist": {
-        "basePath": "dist", // folder where the bundle js generated from webpack will be 
+        "basePath": "dist", // folder where the bundle js generated from webpack will be
         "files": [
 +          "app.min.js" //file js generated from the webpack NOTE: Change the file name to yours
         ],
@@ -196,7 +199,7 @@ Test the wcs-manifest.json with the online test tool [Validator](https://webcomp
 ## Create in SRC folder
 In the SRC folder you should create all the js files necessary for your webcomponent.
 
-Our is a simple Hello World made using JS vanilla and HTMLElement, that you can find in this boilerplate
+Our is a simple Hello World made using vanilla JS and HTMLElement, that you can find in this boilerplate
 
  <details>
     <summary>Example of a simple js file with HTMLElement</summary>
@@ -206,11 +209,11 @@ Our is a simple Hello World made using JS vanilla and HTMLElement, that you can 
         constructor() {
             super();
 
-            // We need an encapsulation of our component to not 
-            // interfer with the host, nor be vulnerable to outside 
+            // We need an encapsulation of our component to not
+            // interfer with the host, nor be vulnerable to outside
             // changes --> Solution = SHADOW DOM
             this.shadow = this.attachShadow(
-                {mode: "open"}    // Set mode to "open", to have access to 
+                {mode: "open"}    // Set mode to "open", to have access to
                                 // the shadow dom from inside this component
             );
         }
@@ -222,7 +225,7 @@ Our is a simple Hello World made using JS vanilla and HTMLElement, that you can 
             return ['title'];
         }
 
-        // Override from HTMLElement 
+        // Override from HTMLElement
         // Do not use setters here, because you might end up with an endless loop
         attributeChangedCallback(propName, oldValue, newValue) {
             console.log(`Changing "${propName}" from "${oldValue}" to "${newValue}"`);
@@ -251,10 +254,10 @@ Our is a simple Hello World made using JS vanilla and HTMLElement, that you can 
 
         render() {
             this.shadow.innerHTML = `
-                <style> 
+                <style>
                     h1 {
-                        color: black; 
-                    } 
+                        color: black;
+                    }
                 </style>
                 <h1>
                     ${this.title}
@@ -271,7 +274,7 @@ Our is a simple Hello World made using JS vanilla and HTMLElement, that you can 
 <br>
 
 # Test the webcomponent
-To test the webcomponent you use Webpack and Docker. 
+To test the webcomponent you use Webpack and Docker.
 
 ## Installing Webpack
 Webpack is used to compile JavaScript modules. [Here](https://webpack.js.org/guides/getting-started/) you can find more information.
@@ -299,7 +302,7 @@ module.exports = {
   entry: './src/index.js', // your js file to bundle
   output: {
     filename: 'main.js', //file name that you should put in the wcs-manifest.json.
-    path: path.resolve(__dirname, 'dist'), 
+    path: path.resolve(__dirname, 'dist'),
   },
 };
  ```
@@ -326,7 +329,7 @@ Example: If you use webpack the file might be:
 
 ## Installing Docker
 Now that you have the single js file created by the webpack you can use docker to run the file and see the resulting webcomp on docker. But first you'll have to install it.<br>
-Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine. 
+Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine.
 
 ### The docker containers
 In the file `docker-compose.yml` you can see all the containers that will open on docker:<br>
@@ -380,7 +383,7 @@ For accessing the webcomponent in a separated docker in the browser you will nee
 -The webcomponent should be visible and work in the ODH Webcomponent store (docker test)
 
 ## Submission
-- Create a pull request against the development branch (A more detailed description on how to contribute on the the Noi-techpark GitHub can be found [here](https://github.com/noi-techpark/documentation/blob/main/contributors.md))
+- Create a pull request against the `main` branch (A more detailed description on how to contribute on the the Noi-techpark GitHub can be found [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started))
 - Finally, to publish check out this how to guide [here](https://github.com/noi-techpark/odh-docs/wiki/How-to-publish-your-web-component-on-the-Open-Data-Hub-Store)
 
 ### Support
