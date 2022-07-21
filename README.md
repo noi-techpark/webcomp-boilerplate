@@ -38,7 +38,7 @@ To build the project, the following must have been installed in your local machi
 
 ## Start from the web-component boilerplate
 You'll have to start from the boilerplate made available by the NOI Techpark on GitHub [here](https://github.com/noi-techpark/webcomp-boilerplate).
-Before beginning check out how to contribute to the Noi GitHUb [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started).
+Before beginning check out how to contribute to NOI [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started).
 - Fork the repository
 - Checkout a topic branch from the `main` branch.
 - Then ask the customer care ([help@opendatahub.com](mailto:help@opendatahub.com)) for a repository for your project, that will be the repository to which you'll make the pull request to.
