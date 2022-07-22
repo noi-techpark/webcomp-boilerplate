@@ -33,7 +33,6 @@ This guide will aid you in the process of creating a valid web-component that ha
 ## Prerequisites
 To build the project, the following must have been installed in your local machine:
 - Node 12/ NPM 6
-- Webpack
 - Docker
 
 ## Start from the web-component boilerplate
@@ -44,11 +43,13 @@ Before beginning check out how to contribute to NOI [here](https://github.com/no
 - Then ask the customer care ([help@opendatahub.com](mailto:help@opendatahub.com)) for a repository for your project, that will be the repository to which you'll make the pull request to.
 
 In the boilerplate it's integrated an hello world webcomponent ready to use. If you have the prerequisites installed to run the hello world you'll have to just use these three commands in the powershell terminal:
+- `npm install`
 - `npm run build`
 - `cp .env.example .env`
 - `docker-compose up`
 
-Then in your browser in `localhost:8999` you'll see the hello world component in the ODH webcomponent store.
+In `localhost:8998` you'll see the hello world component and for testing live reload is available, so you can see the effect of your changes immediately.
+In `localhost:8999` you'll see the hello world component in the ODH webcomponent store, this is important for publishing, as it is vital your webcomponent works on the store.
 
 ## Modify the file wcs-manifest.json
 To register with the web components hub a wcs-manifest.json file must be in your repository's root directory. <br>
