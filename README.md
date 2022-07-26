@@ -39,7 +39,6 @@ To build the project, the following must have been installed in your local machi
 You'll have to start from the boilerplate made available by the NOI Techpark on GitHub [here](https://github.com/noi-techpark/webcomp-boilerplate).
 Before beginning check out how to contribute to NOI [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started).
 - Fork the repository
-- Checkout a topic branch from the `main` branch.
 - Then ask the customer care ([help@opendatahub.com](mailto:help@opendatahub.com)) for a repository for your project, that will be the repository to which you'll make the pull request to.
 
 In the boilerplate it's integrated an hello world webcomponent ready to use. If you have the prerequisites installed to run the hello world you'll have to just use these three commands in the powershell terminal:
@@ -275,58 +274,77 @@ Our is a simple Hello World made using vanilla JS and HTMLElement, that you can 
 <br>
 
 # Test the webcomponent
-To test the webcomponent you use Webpack and Docker.
+To test the webcomponent you use Webpack and Docker. If you started with the deployment of the Hello world many of the commands for the setups won't be necessary.
 
 ## Installing Webpack
-Webpack is used to compile JavaScript modules. [Here](https://webpack.js.org/guides/getting-started/) you can find more information.
+Webpack is used to compile JavaScript modules. [Here](https://webpack.js.org/guides/getting-started/) you can find more information.<br>
+It is necessary to use it because in the manifest json you should use just one JS file with also assets like css, images and fonts bundled into it.<br>
+After deploying the boilerplate the webcomponent files in the SRC will be bundled inside a dist folder
 
 ### Basic Setup
  - initialize npm<br>
  `npm init -y`<br>
  - install [Webpack Locally](https://webpack.js.org/guides/installation/#local-installation)<br>
  - install the webpack-cli (the tool used to run webpack on the command line)<br>
- `npm install webpack webpack-cli --save-dev`
-
+ `npm install webpack webpack-cli --save-dev`<br>
+ <br>
+ 
 ### Creating a bundle
 To test the webcomponent on docker you'll have first to bundle all your files and assets (ex: CSS, Images, Fonts) in a single JS file. <br>
 You can also see <b>[here](https://webpack.js.org/guides/asset-management) </b>the guide provided by Webapack on how to bundle assets.<br>
-This file will be generated from webpack in the dist folder and it is the one you'll have to recall in the wcs-manifest.json.
+This file will be generated from webpack in the dist folder and it is the one you'll have to recall in the wcs-manifest.json.<br>
+<br>
+There are two webpack files the production and developer<br>
+<br>
+- webpack.prod.js
+In the production the entry is your javascript file you want to bundle and the output is the bundled file. You can change the name to your liking but remember to change it also in the manifest json file.<br> This file will be easy accessible with a npm script  `npm run build`.
 
-This is an example on how to create a simple bundle without assets (to learn how to bundle assets please follow this guide [here](https://webpack.js.org/guides/asset-management))
-
-- Create a folder called `dist`
-- Create a `webpack.config.js` file
 ```diff
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // your js file to bundle
+  mode: 'production',
+  entry: './src/index.js', //your js file that will be bundles
   output: {
-    filename: 'main.js', //file name that you should put in the wcs-manifest.json.
+    filename: 'webcomp-boilerplate.min.js', // the bundled file - the file name you should also put in the manifest.json
     path: path.resolve(__dirname, 'dist'),
   },
 };
  ```
-- Run the build <br>
-  `npx webpack --config webpack.config.js`
-   > NOTE: If a webpack.config.js is present, the webpack command picks it up by default. We use the --config option here only to show that you can pass a configuration of any name. This will be useful for more complex configurations that need to be split into multiple files.
+- webpack.dev.js
+In the developer the entry is the same but the the bundle will be stored in the memory with the Dev server.Usuful for testing as it enables live reload and you can see the changes in real time<br>
+This file will be easy accessible with a npm script `npm run start`.
+
+```diff
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js', //your js file that will be bundles
+  output: {
+    filename: 'webcomp-boilerplate.js', //this will be only saved in the memory, usufull for testing
+    clean: true
+  },
+  devServer: {            //the server were the file will be processed
+    static: './public',
+    port: 8998,
+    hot: true
+  },
+  devtool: 'inline-source-map',
+};
+ ```
 
 ### Modify the Package.json
 - Adjust the general parts like name, description, … <br>
 <br>
-Given it's not particularly fun to run a local copy of webpack from the CLI, we can set up a little shortcut. Let's adjust our package.json by adding an npm script:
-- Adjust the scripts “npm run start”, “npm run build”, “npm run lint” and “npm run test”
+In the Package.json it is important to have installed Webpack inside the Dependencies - but that was already done when you followeed the instruction to deploy the boilerplate, or you can consult the basic setup above.<br>
+Given it's not particularly fun to run a local copy of webpack from the CLI, we can set up a little shortcut we made two scripts commands.<br>
 
-Example: If you use webpack the file might be:
-```diff
-  "name": "webcomponent-demo",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-+  "build": "webpack"
-  }
- ```
- Now the `npm run build` command can be used in place of the `npx` command we used earlier. Note that within scripts we can reference locally installed npm packages by name the same way we did with `npx`. This convention is the standard in most npm-based projects because it allows all contributors to use the same set of common scripts.
+- The `npm run build` will bundle the file and then compress it to a non human readable form and the output will be the file inside the dist folder.
+
+- The `npm run start` will also do a bundling but only in the memory with the server and it doesn’t outup a new file, this is usuful for testing
+
+You can adjust the scripts “npm run start”, “npm run build”, “npm run lint” and “npm run test” to your liking.
 
 ## Installing Docker
 Now that you have the single js file created by the webpack you can use docker to run the file and see the resulting webcomp on docker. But first you'll have to install it.<br>
@@ -359,12 +377,15 @@ ex :  `npm run build`
 #### Stop the docker containers
 - `docker-compose stop`
 
+#### Delete the docker containers from your machine
+- `docker-compose down`
+
 #### Delete your webcomponents from the store
 - `[sudo] rm -f workspace`
 - `docker-compose rm -f -v postgres`
 
 # Test if your webcomp will run in the webcomp store
-The last step is to test if your web component will run on the Open Data Hub webcomponent store. This is a very important step, because we will not accept web components that won't work on our store.
+The last step is to test if your web component will run on the Open Data Hub webcomponent store. This is a very important step, because we will not accept web components that won't work on our store.<br>
 For the docker commands please consult the paragraph above.
 
 ## Test in a local docker instance of the webcomponent store
@@ -384,7 +405,7 @@ For accessing the webcomponent in a separated docker in the browser you will nee
 -The webcomponent should be visible and work in the ODH Webcomponent store (docker test)
 
 ## Submission
-- Create a pull request against the `main` branch (A more detailed description on how to contribute on the the Noi-techpark GitHub can be found [here](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started))
+- Create a pull request against the repository you asked at the beggining of your project to the [help@opendatahub.com](mailto:help@opendatahub.com)
 - Finally, to publish check out this how to guide [here](https://github.com/noi-techpark/odh-docs/wiki/How-to-publish-your-web-component-on-the-Open-Data-Hub-Store)
 
 ### Support
