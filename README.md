@@ -296,7 +296,7 @@ This file will be generated from webpack in the dist folder and it is the one yo
 <br>
 There are two webpack files the production and developer<br>
 <br>
-- webpack.prod.js
+- webpack.prod.js <br>
 In the production the entry is your javascript file you want to bundle and the output is the bundled file. You can change the name to your liking but remember to change it also in the manifest json file.<br> This file will be easy accessible with a npm script  `npm run build`.
 
 ```diff
@@ -311,7 +311,7 @@ module.exports = {
   },
 };
  ```
-- webpack.dev.js
+- webpack.dev.js <br>
 In the developer the entry is the same but the the bundle will be stored in the memory with the Dev server.Usuful for testing as it enables live reload and you can see the changes in real time<br>
 This file will be easy accessible with a npm script `npm run start`.
 
@@ -335,8 +335,6 @@ module.exports = {
  ```
 
 ### Modify the Package.json
-- Adjust the general parts like name, description, … <br>
-<br>
 In the Package.json it is important to have installed Webpack inside the Dependencies - but that was already done when you followeed the instruction to deploy the boilerplate, or you can consult the basic setup above.<br>
 Given it's not particularly fun to run a local copy of webpack from the CLI, we can set up a little shortcut we made two scripts commands.<br>
 
