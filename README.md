@@ -406,5 +406,8 @@ For accessing the webcomponent in a separated docker in the browser you will nee
 - Create a pull request against the repository you asked at the beggining of your project to the [help@opendatahub.com](mailto:help@opendatahub.com)
 - Finally, to publish check out this how to guide [here](https://github.com/noi-techpark/odh-docs/wiki/How-to-publish-your-web-component-on-the-Open-Data-Hub-Store)
 
+### License
+image: "wcs-logo.png" is under the CCO License (public domain)
+
 ### Support
 For support, please contact [help@opendatahub.com](mailto:help@opendatahub.com).
