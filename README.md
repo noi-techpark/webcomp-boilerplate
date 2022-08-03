@@ -33,7 +33,7 @@ To encourage you and support you in the process of contributing to the store we 
     - [Support](#support)
 
 # Create
-[Video guide: Introduction](https://vimeo.com/734001070)
+[Video guide: Introduction](https://vimeo.com/734001032)
 ## Prerequisites
 To build the project, the following must have been installed in your local machine:
 - Node 12/ NPM 6
@@ -56,7 +56,7 @@ In `localhost:8998` you'll see the hello world component and for testing live re
 In `localhost:8999` you'll see the hello world component in the ODH webcomponent store, this is important for publishing, as it is vital your webcomponent works on the store.
 
 ## Modify the file wcs-manifest.json
-[Video guide: What is the manifest.json?](https://vimeo.com/734001138)
+[Video guide: What is the manifest.json?](https://vimeo.com/734001138)<br>
 To register with the web components hub a wcs-manifest.json file must be in your repository's root directory. <br>
 Please look attentively at what you should customize for your project<br>
 - Adjust the general parts like title, description, your license,the authors section,image,searchTags,the name of the js file generated from webpack(more info about it later),the configuration section
@@ -203,7 +203,7 @@ Here are some examples of what a configuration may include:
 Test the wcs-manifest.json with the online test tool [Validator](https://webcomponents.opendatahub.com/validator/)
 
 ## Create in SRC folder
-[Video guide: Hello World](https://vimeo.com/734001138)
+[Video guide: Hello World](https://vimeo.com/734000899)<br>
 In the SRC folder you should create all the js files necessary for your webcomponent.
 Our is a simple Hello World made using vanilla JS and HTMLElement, that you can find in this boilerplate.
 
@@ -284,7 +284,7 @@ Our is a simple Hello World made using vanilla JS and HTMLElement, that you can 
 To test the webcomponent you use Webpack and Docker. If you started with the deployment of the Hello world many of the commands for the setups won't be necessary.
 
 ## Installing Webpack
-[Video guide: What is Webpack?](https://vimeo.com/734001174)
+[Video guide: What is Webpack?](https://vimeo.com/734001174) <br>
 Webpack is used to compile JavaScript modules. [Here](https://webpack.js.org/guides/getting-started/) you can find more information.<br>
 It is necessary to use it because in the manifest json you should use just one JS file with also assets like css, images and fonts bundled into it.<br>
 After deploying the boilerplate the webcomponent files in the SRC will be bundled inside a dist folder
@@ -353,7 +353,7 @@ Given it's not particularly fun to run a local copy of webpack from the CLI, we 
 You can adjust the scripts “npm run start”, “npm run build”, “npm run lint” and “npm run test” to your liking.
 
 ## Installing Docker
-[Video guide: What is Docker?](https://vimeo.com/734001110)
+[Video guide: What is Docker?](https://vimeo.com/734001110) <br>
 Now that you have the single js file created by the webpack you can use docker to run the file and see the resulting webcomp on docker. But first you'll have to install it.<br>
 Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine.
 
@@ -402,7 +402,7 @@ You can also access the webcomponent running in a simple separated docker contai
 For accessing the webcomponent in a separated docker in the browser you will need a server (e.g. webpack dev-server) that is hosting a page which includes the webcomponent tag, as well as the script defining it. This page needs to be hosted on port 8080 as specified in your docker-compose file.
 
 # Last Steps
-[Video guide: How to publish your webcomponent](https://vimeo.com/734001003)
+[Video guide: How to publish your webcomponent](https://vimeo.com/734001003) <br>
 - Delete the containers of the ODH store in the `docker-compose.yml` file (every container except `app`- the first one)
 - Modify the `README.example.md` to create the README file of your webcomp and then delete the one of the Boilerplate.
 
