@@ -66,6 +66,7 @@ A manifest file should look like this:
 ```diff
     {
 +   "title": "Title of your webcomponent",
++   "shortName": "A unique short name with no spaces, like 'your-webcomponent'",
 +   "description": "Description of your webcomponent",
 +   "descriptionAbstract": "Small description of your webcomponent",
     "license": "AGPL-3.0-or-later",
