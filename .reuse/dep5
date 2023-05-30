@@ -3,10 +3,6 @@ Upstream-Name: webcomp-boilerplate
 Upstream-Contact: NOI Techpark <digital@noi.bz.it>
 Source: https://github.com/noi-techpark/webcomp-boilerplate
 
-Files: src/* work/* odh-*.js
-Copyright: (c) 2021 NOI Techpark <digital@noi.bz.it>
-License: AGPL-3.0-or-later
-
-Files: infrastructure/* .editorconfig .gitignore *.md *.txt .env.* *.yml *.json webpack.* wcs-logo.png public/index.html
-Copyright: (c) 2021 NOI Techpark <digital@noi.bz.it>
+Files: .github/* .gitignore LICENSE.md *.json .editorconfig .env.example wcs-logo.png
+Copyright: (c) NOI Techpark <digital@noi.bz.it>
 License: CC0-1.0
