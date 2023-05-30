@@ -1,12 +1,12 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: webcomp-boilerplate
-Upstream-Contact: Peter Moser <p.moser@noi.bz.it>
+Upstream-Contact: NOI Techpark <digital@noi.bz.it>
 Source: https://github.com/noi-techpark/webcomp-boilerplate
 
 Files: src/* work/* odh-*.js
-Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
+Copyright: (c) 2021 NOI Techpark <digital@noi.bz.it>
 License: AGPL-3.0-or-later
 
 Files: infrastructure/* .editorconfig .gitignore *.md *.txt .env.* *.yml *.json webpack.* wcs-logo.png public/index.html
-Copyright: (c) 2021 NOI Techpark <info@noi.bz.it>
+Copyright: (c) 2021 NOI Techpark <digital@noi.bz.it>
 License: CC0-1.0
