@@ -6,6 +6,8 @@ SPDX-License-Identifier: CC0-1.0
 
 # Webcomponent Boilerplate
 
+![REUSE Compliance](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/reuse.yml/badge.svg)
+
 The webcomponent Boilerplate is the start to your project, and it contains a hello-world webcomp to show you how a basic one works and to give you a little help to start your amazing new webcomponent!
 This guide will aid you in the process of creating a valid web-component that has all the requisites necessary to be uploaded on the Open Data Hub Store.<br>
 To encourage you and support you in the process of contributing to the store we created a playlist of videos that explain each step, from start to finish.We will talk about starting from the boilerplate, what the files inside it do, how you have to use webpack and docker for your development process, and finally how to publish it on the ODH Web component store. <br>
