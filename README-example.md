@@ -8,6 +8,7 @@ SPDX-License-Identifier: CC0-1.0
 
 # ToDo: Project Name
 
+![REUSE Compliance](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/reuse.yml/badge.svg)
 [![REUSE status](https://api.reuse.software/badge/github.com/noi-techpark/webcomp-boilerplate)](https://api.reuse.software/info/github.com/noi-techpark/webcomp-boilerplate)
 [![CI/CD](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/main.yml/badge.svg)](https://github.com/noi-techpark/webcomp-boilerplate/actions/workflows/main.yml)
 
