@@ -1,8 +1,8 @@
 {
-  "title": "Hello-world",
-  "shortName": "hello-world-2",
-  "description": "Hello world simple webcomp example",
-  "descriptionAbstract": "Hello world simple webcomp example",
+  "title": "Near Parking Available",
+  "shortName": "near-parking",
+  "description": "Near parking that is Available",
+  "descriptionAbstract": "Near parking that is Available",
   "license": "AGPL-3.0-or-later",
   "repositoryUrl": "https://your-repository.git",
   "copyrightHolders": [
@@ -31,15 +31,15 @@
     "scripts": []
   },
   "configuration": {
-    "tagName": "hello-world",
+    "tagName": "near-parkings",
     "options": [
       {
-        "key": "title",
+        "key": "coordinates",
         "type": "text",
-        "label": "title of the web-comp",
-        "required": false,
+        "label": "Accepts either a pair of coordinates (x, y) or a set of four coordinates (leftX, leftY, rightX, rightY), defining the search area for nearby parking information. For a pair of coordinates, the element automatically creates a bounding box around the specified point, while for a set of four coordinates, it directly defines the search area.",
+        "required": true,
         "options": {
-          "default": "hello-world"
+          "default": "near-parkings"
         }
       }
     ]
