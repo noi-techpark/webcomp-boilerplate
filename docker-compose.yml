@@ -11,7 +11,7 @@ services:
     working_dir: /code
     command: sh -c "test -d node_modules || npm install; npm run start"
     ports:
-      - "${APP_PORT}:8998"
+      - "8998:8998"
     tty: true
 
   frontend:

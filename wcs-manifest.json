@@ -21,7 +21,7 @@
       "organizationUrl": "..."
     }
   ],
-  "image": "wcs-logo.png",
+  "image": "webcomponent-image.png",
   "searchTags": [],
   "dist": {
     "basePath": "dist",
