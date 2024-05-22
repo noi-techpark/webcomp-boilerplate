@@ -130,7 +130,7 @@ class NearParkings extends HTMLElement {
               <div class="availability-arrow" style="left: ${arrowPosition}%;"></div>
             </div>
             <div class="availability-text" style="left: ${arrowPosition};">
-              ${capacity}
+              Capacity: ${capacity}
             </div>
           </div>
         `;
