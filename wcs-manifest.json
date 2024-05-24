@@ -4,7 +4,6 @@
   "description": "Near parking that is Available",
   "descriptionAbstract": "Near parking that is Available",
   "license": "AGPL-3.0-or-later",
-  "repositoryUrl": "https://your-repository.git",
   "copyrightHolders": [
     {
       "name": "NOI",
@@ -26,7 +25,7 @@
   "dist": {
     "basePath": "dist",
     "files": [
-      "webcomp-boilerplate.min.js"
+      "near-parking-available.min.js"
     ],
     "scripts": []
   },

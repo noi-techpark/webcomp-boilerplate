@@ -2,13 +2,13 @@
 //
 // SPDX-License-Identifier: CC0-1.0
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
+  mode: "production",
+  entry: "./src/index.js",
   output: {
-    filename: 'webcomp-boilerplate.min.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "near-parking-available.min.js",
+    path: path.resolve(__dirname, "dist"),
   },
 };
