@@ -1,12 +1,13 @@
-// Import the HomePage and AttractionsPage components
 import './attractions.js'; 
 import './aboutUs.js';
+import './footer.js';
+import './ski.js'; 
+import './camping.js';
 
-// MainPage component definition
 class MainPage extends HTMLElement {
     constructor() {
         super();
-        this.shadow = this.attachShadow({ mode: "open" });
+        this.attachShadow({ mode: "open" });
     }
 
     connectedCallback() {
@@ -15,13 +16,7 @@ class MainPage extends HTMLElement {
     }
 
     render() {
-        const imagePath1 = 'pictures/Bolzano1.jpg';
-        const imagePath2 = 'pictures/Bolzano2.webp';
-        const imagePath3 = 'pictures/Bolzano3.jpg';
-        const imagePath4 = 'pictures/Bolzano0.webp';
-        const imagePath5 = 'pictures/Bolzano4.jpg';
-
-        this.shadow.innerHTML = `
+        this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     font-family: 'Poppins', sans-serif;
@@ -44,6 +39,7 @@ class MainPage extends HTMLElement {
 
                 .brand { 
                     color: black;
+                    flex: left;
                 }
 
                 .menu ul {
@@ -79,7 +75,7 @@ class MainPage extends HTMLElement {
                     flex-direction: column; 
                     justify-content: center; 
                     align-items: center; 
-                    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imagePath4}') center/cover repeat;
+                    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pictures/Bolzano0.webp') center/cover repeat;
                 }
 
                 .heading {
@@ -95,17 +91,6 @@ class MainPage extends HTMLElement {
 
                 .heading p {
                     margin-bottom: 40px; 
-                }
-
-                .heading a {
-                    text-decoration: none;
-                    color: #000;
-                    font-size: 24px;
-                    font-weight: bold;
-                    border-radius: 45px;
-                    padding: 14px 50px;
-                    background-color: #fff;
-                    transition: letter-spacing 0.6s;
                 }
 
                 .heading a:hover {
@@ -143,11 +128,6 @@ class MainPage extends HTMLElement {
                     transition: transform 0.3s ease;
                 }
 
-                /* Smooth scrolling */
-                html {
-                    scroll-behavior: smooth;
-                }
-
             </style>
 
             <div class="navbar">
@@ -156,10 +136,6 @@ class MainPage extends HTMLElement {
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a id = "aboutUsLink" href="#aboutUsPage">About Us</a></li>
-                        <li><a id="attractionsLink" href="#attractionsPage">Attractions</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -168,49 +144,25 @@ class MainPage extends HTMLElement {
                 <div class="heading">
                     <h1>Explore Bolzano</h1>
                     <p>Find Bolzano's top attractions in our web component and plan your next adventure!</p>
-                    <a id= "seemoreLink" href = "#attractionsPage">See More</a>
                 </div>
 
-                <div class="locations">
+                <div id="attractionsPage" class="locations">
                     <div class="places">
-                        <img src="${imagePath1}" alt="Bolzano">
+                        <img src="pictures/Bolzano1.jpg" alt="Bolzano">
                     </div>
                     <div class="places">
-                        <img src="${imagePath2}" alt="Bolzano">
+                        <img src="pictures/Bolzano2.webp" alt="Bolzano">
                     </div>
                     <div class="places">
-                        <img src="${imagePath3}" alt="Bolzano">
+                        <img src="pictures/Bolzano3.jpg" alt="Bolzano">
                     </div>
                     <div class="places">
-                        <img src="${imagePath5}" alt="Bolzano">
+                        <img src="pictures/Bolzano4.jpg" alt="Bolzano">
                     </div>
                 </div>
             </div>
         `;
     }
-
-    setupNavigation() {
-        const aboutUsLink = this.shadow.querySelector('#aboutUsLink');
-        const attractionsLink = this.shadow.querySelector('#attractionsLink');
-        const seemoreLink = this.shadow.querySelector('#attractionsLink');
-
-        aboutUsLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('aboutUsPage').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        attractionsLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('attractionsPage').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        seemoreLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('attractionsPage').scrollIntoView({ behavior: 'smooth'});
-        });
-
-
-    }
-}
+} 
 
 customElements.define('main-page', MainPage);

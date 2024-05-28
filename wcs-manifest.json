@@ -21,7 +21,7 @@
       "organizationUrl": "..."
     }
   ],
-  "image": "webcomponent-image.png",
+  "image": "webcomponent-Image.png",
   "searchTags": [],
   "dist": {
     "basePath": "dist",

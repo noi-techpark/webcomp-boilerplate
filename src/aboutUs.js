@@ -24,8 +24,14 @@ class AboutUsPage extends HTMLElement {
 
                 .about-us-section h2 {
                     font-size: 36px;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     color: #333;
+                    font-weight: bold; 
+                    text-transform: uppercase; 
+                    letter-spacing: 2px; 
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+                    border-bottom: 2px solid #333; 
+                    padding-bottom: 8px;
                 }
 
                 .about-us-list {
