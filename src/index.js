@@ -1,7 +1,5 @@
-import './attractions.js'; 
-import './aboutUs.js';
-import './footer.js';
-import './ski.js'; 
+import './attractions.js';
+import './ski.js';
 import './camping.js';
 
 class MainPage extends HTMLElement {
