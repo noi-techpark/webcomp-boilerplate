@@ -1,4 +1,4 @@
-let data = require("/public/data.json");
+const data = require("/public/data.json");
 
 class CampingPage extends HTMLElement {
 	constructor() {
