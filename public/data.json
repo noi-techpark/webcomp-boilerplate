@@ -1,0 +1,123 @@
+{
+	"attractions": [
+		{
+			"title": "Archivio Storico della Città di Bolzano",
+			"img": "attractions/Archive.jpg",
+			"descr": "The exhibition path documents, across 13 rooms and 700 square meters, the history of the Victory Monument and its weighty ideological meanings, as well as more generally the local events from 1918 to 1945 related to the fascist and Nazi dictatorships. The rooms were made accessible to the public in July 2014.",
+			"locationName": "Via Portici 30, Bolzano",
+			"locationEmbed": "https://maps.app.goo.gl/aWqfWZGCYoxf3v2s8"
+		},
+		{
+			"title": "Museo Civico di Bolzano",
+			"img": "attractions/Museum.png",
+			"descr": "The oldest museum in South Tyrol, located in the provincial capital of Bolzano, exhibits precious historical-artistic collections related to the territory.The following areas are open to the public:<li>The ground floor, hosting temporary exhibitions.</li><li>The first floor and the tower, where selected works from the museum's collections and from private collections are displayed.</li><li>The garden, hosting outdoor events and providing access to the lapidarium.</li>",
+			"locationName": "Via Cassa di Risparmio, No. 14, Bolzano",
+			"locationEmbed": "https://maps.app.goo.gl/WWtXCCtGumX7Kszf8"
+		},
+		{
+			"title": "Piccola Galleria",
+			"img": "attractions/Galleria.jpg",
+			"descr": "The Piccola Galleria is an exhibition space located in the historic center of the city, available to artists, organizations, and associations at an affordable cost. Managed by the Cultural Services Division of the Municipality of Bolzano, this gallery has been offering intriguing proposals of art and culture since 2002. Available by reservation, it serves as a vibrant platform for creative expression and community engagement.",
+			"locationName": "Am Alten Rathaus, 8, Bolzano",
+			"locationEmbed": "https://maps.app.goo.gl/ktzcEza29XGA9c5L6"
+		},
+		{
+			"title": "Museo della Scuola di Bolzano",
+			"img": "attractions/SchoolMuseum.jpg",
+			"descr": "The Museo della Scuola, or School Museum, was inaugurated on May 12, 1995, at the historic \"Elisabethschule,\" now known as the \"Dante Alighieri\" school. Since 2015, it has been located in Rencio, within the Renaissance palace also known as the \"ex Agnello,\" which was formerly the site of the old neighborhood school. The museum's exhibition allows visitors to rediscover various aspects of past school life in an engaging manner, with a focus primarily on Bolzano and the Alto Adige region from the late nineteenth century to the present day. It was the first School Museum in Italy and the first in Europe dedicated to schools of linguistic minorities.",
+			"locationName": "Via Rencio, 51b, Bolzano",
+			"locationEmbed": "https://maps.app.goo.gl/HAmcs2tK5mYDJ7Jq8"
+		},
+		{
+			"title": "Monumento alla Vittoria",
+			"img": "attractions/Vittoria.jpg",
+			"descr": "The Historical Archive of the City of Bolzano preserves documentation produced and received in over seven hundred years of political and administrative activity and is therefore a vital testimony to the cultural heritage and historical memory of the city. It also preserves the archives of the former municipalities of Zwölfmalgreien (Dodiciville) and Gries, which, autonomous since 1849, were annexed to Bolzano in 1910 and 1925 respectively.",
+			"locationName": "Piazza della Vittoria, Bolzano",
+			"locationEmbed": "https://maps.app.goo.gl/FNh5N6RUCJSBrzyJ7"
+		},
+		{
+			"title": "I \"Sette di Gusen\"",
+			"img": "attractions/Gusen.jpg",
+			"descr": "During the years of Nazi occupation, the \"Seven of Gusen\" were part of the clandestine National Liberation Committee of Bolzano, which was led by Manlio Longon. For their resistance activity against Nazism, they were arrested at their respective workplaces in the second half of December 1944. Interrogated and tortured by Major Schiffer, head of the Gestapo, their silence saved other women and men involved in the resistance within the clandestine committee assisting deportees from the Lager at Via Resia. After the interrogations, they were imprisoned in the Bolzano Lager for just over a month. On February 1, 1945, along with 528 other deportees, they departed from the Via Pacinotti platform, arriving at the Mauthausen Lager on February 4. After quarantine and registration at Mauthausen, they were transferred to Gusen. Due to the terrible living and working conditions in the camps, none of them returned.",
+			"locationName": "Georgestraße 7, 4222 Gusen",
+			"locationEmbed": "https://maps.app.goo.gl/mMKgVWpeYMuk9jhN9"
+		}
+	],
+	"skiing": [
+		{
+			"title": "Carezza Dolomites ski area",
+			"img": "ski/Ski1.jpg",
+			"descr": "Carezza Dolomites, a historic Alpine ski area since 1950, boasts 40 km of slopes accessed by modern cable cars and 11 lifts, just 20 minutes from Bolzano/Bozen. Perfect for families, it offers \"King Laurin Children's World\" and eco-friendly practices, using water from its own reservoirs for snow production.",
+			"locationEmbed": "https://maps.app.goo.gl/ppRbkRPy8HZ2EAMT6"
+		},
+		{
+			"title": "Jochgrimm ski area",
+			"img": "ski/Ski2.jpg",
+			"descr": "Jochgrimm ski area offers seven kilometers of slopes serviced by four lifts, ideal for beginners and families. With 'Fantiland' for kids and connections to Lavazè cross-country ski center, it's a top choice for school outings. Explore nearly 80 km of trails in surrounding villages, or opt for snowshoeing for serene views of Dolomite peaks.",
+			"locationEmbed": "https://maps.app.goo.gl/H7h9CkP71M2mr8Yq7"
+		},
+		{
+			"title": "Reinswald ski area",
+			"img": "ski/Ski3.jpg",
+			"descr": "In the Sarntal valley, the ski lifts climb to 2400 m, offering various slopes, including the challenging \"Joch slope\". Snowboarders enjoy the Sunpark, while cross-country skiers explore scenic trails. Don't miss the famous \"Sarner Striezl\" bread at the valley station and experience thrilling toboggan runs under the full moon in Reinswald.",
+			"locationEmbed": "https://maps.app.goo.gl/3dZJ5Uvp38G11oK97"
+		},
+		{
+			"title": "Rittner Horn ski area",
+			"img": "ski/Ski4.jpg",
+			"descr": "Climb the Rittner Horn for a stunning 360° panorama of the Dolomites and Alps. Families enjoy the quiet ski area at Rittner Horn, while cross-country skiers explore the alpine trails. Enjoy winter hiking and sledding, and don't miss speed skating at the high-altitude rink. Access by cable car from Bolzano to Soprabolzano, then a scenic railway to Collalbo.",
+			"locationEmbed": "https://maps.app.goo.gl/VRcjwrzhETZ2o2sp9"
+		}
+	],
+	"camping": [
+		{
+			"title": "Schlosshof Resort Luxury Camping",
+			"img": "camping/Camping1.jpg",
+			"descr": "5 stars",
+			"locationName": "Lana",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.1587570301053!2d11.16576727617149!3d46.611552871115855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782bdee4c5a6c8b%3A0xde6aacb7eaaf8531!2sSchlosshof%20Resort%20-%20Hotel%20%26%20Camping!5e1!3m2!1sen!2sit!4v1716565602348!5m2!1sen!2sit"
+		},
+		{
+			"title": "Camping Sägemühle",
+			"img": "camping/Camping2.jpg",
+			"descr": "4 stars",
+			"locationName": "Prato/Prad",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.8650031333614!2d10.593599576171846!3d46.617659571116334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47831fa79ff345d5%3A0x2e2a53bff6c6d3dd!2sCamping%20Residence%20S%C3%A4gem%C3%BChle!5e1!3m2!1sen!2sit!4v1716567420414!5m2!1sen!2sit"
+		},
+		{
+			"title": "Waldcamping",
+			"img": "camping/Camping3.jpg",
+			"descr": "4 stars",
+			"locationName": "Naturno/Naturns",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.177030520738!2d11.005901976173364!3d46.643018471117635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782c056653a6583%3A0x5d9fe761978a0ae3!2sWaldcamping%20Naturns!5e0!3m2!1sen!2sit!4v1716575525947!5m2!1sen!2sit"
+		},
+		{
+			"title": "Camping Antholz",
+			"img": "camping/Camping4.jpg",
+			"descr": "3 stars",
+			"locationName": "Anterselva di Sopra/Antholz-Obertal",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.9290430938004!2d12.10701777618639!3d46.86476877113139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477788e09a76aac1%3A0x707992ed86433f4c!2sCamping%20Antholz!5e0!3m2!1sen!2sit!4v1716575455636!5m2!1sen!2sit"
+		},
+		{
+			"title": "Camping AL PLAN-Dolomites",
+			"img": "camping/Camping5.jpg",
+			"descr": "3 stars",
+			"locationName": "San Vigilio",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.5460308073284!2d11.936019276176374!3d46.69496017112074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477822fd4ef8dab7%3A0x880177044ae4a8e!2sCamping%20AL%20PLAN-Dolomites!5e0!3m2!1sen!2sit!4v1716636147508!5m2!1sen!2sit"
+		},
+		{
+			"title": "Camping Zum See",
+			"img": "camping/Camping6.jpg",
+			"descr": "3 stars",
+			"locationName": "S.Valentino/St. Valentin",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.052776393551!2d10.528939976180432!3d46.7638561711249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478324e3c5a4fa4d%3A0xc4f7eaa13e11ae86!2sCamping%20zum%20See!5e0!3m2!1sen!2sit!4v1716636356536!5m2!1sen!2sit"
+		},
+		{
+			"title": "Radlstadl Camping Saltaus",
+			"img": "camping/Camping7.jpg",
+			"descr": "2 stars",
+			"locationName": "Rifiano/Riffian",
+			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.9273684226!2d11.199520176178304!3d46.72689407112268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782bbde2ec1ba8b%3A0xa5c7f6f27f933809!2sRadlstadl%20%26%20Camping%20Saltaus!5e0!3m2!1sen!2sit!4v1716636457381!5m2!1sen!2sit"
+		}
+	]
+}

@@ -1,3 +1,5 @@
+let data = require("/public/data.json");
+
 class CampingPage extends HTMLElement {
 	constructor() {
 		super();
