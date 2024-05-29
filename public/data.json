@@ -75,49 +75,49 @@
 			"img": "camping/Camping1.jpg",
 			"descr": "5 stars",
 			"locationName": "Lana",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.1587570301053!2d11.16576727617149!3d46.611552871115855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782bdee4c5a6c8b%3A0xde6aacb7eaaf8531!2sSchlosshof%20Resort%20-%20Hotel%20%26%20Camping!5e1!3m2!1sen!2sit!4v1716565602348!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/NJHXsmhk9NA677ot6"
 		},
 		{
 			"title": "Camping Sägemühle",
 			"img": "camping/Camping2.jpg",
 			"descr": "4 stars",
 			"locationName": "Prato/Prad",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.8650031333614!2d10.593599576171846!3d46.617659571116334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47831fa79ff345d5%3A0x2e2a53bff6c6d3dd!2sCamping%20Residence%20S%C3%A4gem%C3%BChle!5e1!3m2!1sen!2sit!4v1716567420414!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/VNvVPf4E3e714pPU7"
 		},
 		{
 			"title": "Waldcamping",
 			"img": "camping/Camping3.jpg",
 			"descr": "4 stars",
 			"locationName": "Naturno/Naturns",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.177030520738!2d11.005901976173364!3d46.643018471117635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782c056653a6583%3A0x5d9fe761978a0ae3!2sWaldcamping%20Naturns!5e0!3m2!1sen!2sit!4v1716575525947!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/no3kwZ2iuRZBiPfd9"
 		},
 		{
 			"title": "Camping Antholz",
 			"img": "camping/Camping4.jpg",
 			"descr": "3 stars",
 			"locationName": "Anterselva di Sopra/Antholz-Obertal",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.9290430938004!2d12.10701777618639!3d46.86476877113139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477788e09a76aac1%3A0x707992ed86433f4c!2sCamping%20Antholz!5e0!3m2!1sen!2sit!4v1716575455636!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/UAvocGEYEsDPpExR9"
 		},
 		{
 			"title": "Camping AL PLAN-Dolomites",
 			"img": "camping/Camping5.jpg",
 			"descr": "3 stars",
 			"locationName": "San Vigilio",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.5460308073284!2d11.936019276176374!3d46.69496017112074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477822fd4ef8dab7%3A0x880177044ae4a8e!2sCamping%20AL%20PLAN-Dolomites!5e0!3m2!1sen!2sit!4v1716636147508!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/mMa3Wyp1gp24R3WPA"
 		},
 		{
 			"title": "Camping Zum See",
 			"img": "camping/Camping6.jpg",
 			"descr": "3 stars",
 			"locationName": "S.Valentino/St. Valentin",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.052776393551!2d10.528939976180432!3d46.7638561711249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478324e3c5a4fa4d%3A0xc4f7eaa13e11ae86!2sCamping%20zum%20See!5e0!3m2!1sen!2sit!4v1716636356536!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/9V8yUySbcWiRkryr6"
 		},
 		{
 			"title": "Radlstadl Camping Saltaus",
 			"img": "camping/Camping7.jpg",
 			"descr": "2 stars",
 			"locationName": "Rifiano/Riffian",
-			"locationEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.9273684226!2d11.199520176178304!3d46.72689407112268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782bbde2ec1ba8b%3A0xa5c7f6f27f933809!2sRadlstadl%20%26%20Camping%20Saltaus!5e0!3m2!1sen!2sit!4v1716636457381!5m2!1sen!2sit"
+			"locationEmbed": "https://maps.app.goo.gl/9n4LiQeueffqFh9U8"
 		}
 	]
 }
