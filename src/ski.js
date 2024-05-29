@@ -14,7 +14,7 @@ class SkiResortPage extends HTMLElement {
 		let skiResorts = "";
 		for (let i in data.skiing) {
 			let resort = data.skiing[i];
-			skiResorts += `<div class="ski-resort-item"><img src="`+resort.img+`"><h3>`+resort.title+`</h3><p>`+resort.descr+`</p><button onclick="window.location.href='`+resort.locationEmbed+`'">Get There</button></div>`;
+			skiResorts += `<div class="attraction-item"><img src="`+resort.img+`"><h3>`+resort.title+`</h3><p>`+resort.descr+`</p><button onclick="window.location.href='`+resort.locationEmbed+`'">Get There</button></div>`;
 		}
 		this.shadow.innerHTML = `
 			<style>
@@ -23,13 +23,13 @@ class SkiResortPage extends HTMLElement {
 					font-family: 'Poppins', sans-serif;
 				}
 
-				.ski-resorts-section {
+				.attractions-section {
 					padding: 50px 20px;
 					background-color: #f8f8f8;
 					text-align: center;
 				}
 
-				.ski-resorts-section h2 {
+				.attractions-section h2 {
 					font-size: 36px;
 					margin-bottom: 30px;
 					color: #333;
@@ -41,14 +41,14 @@ class SkiResortPage extends HTMLElement {
 					padding-bottom: 8px;
 				}
 
-				.ski-resorts-list {
+				.attractions-list {
 					display: flex;
 					justify-content: space-around;
 					flex-wrap: wrap;
 					gap: 20px;
 				}
 
-				.ski-resort-item {
+				.attraction-item {
 					background-color: #fff;
 					border-radius: 10px;
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,20 +58,20 @@ class SkiResortPage extends HTMLElement {
 					text-align: center;
 				}
 
-				.ski-resort-item img {
+				.attraction-item img {
 					width: 100%;
 					height: 200px;
 					object-fit: cover;
 					margin-bottom: 20px;
 				}
 
-				.ski-resort-item h3 {
+				.attraction-item h3 {
 					font-size: 24px;
 					margin: 0 0 10px;
 					color: #333;
 				}
 
-				.ski-resort-item button {
+				.attraction-item button {
 					background-color: #4CAF50;
 					color: white;
 					border: none;
@@ -82,15 +82,15 @@ class SkiResortPage extends HTMLElement {
 					transition: background-color 0.3s ease;
 				}
 
-				.ski-resort-item button:hover {
+				.attraction-item button:hover {
 					background-color: #45a049;
 				}
 			</style>
 
-			<section class="ski-resorts-section">
-				<h2> Ski Resorts </h2>
+			<section class="attractions-section">
+				<h2>Ski Resorts</h2>
 
-				<div class="ski-resorts-list">`+skiResorts+`</div>
+				<div class="attractions-list">`+skiResorts+`</div>
 			</section>
 		`;
 	}
