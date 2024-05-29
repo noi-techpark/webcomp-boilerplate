@@ -107,7 +107,7 @@ class AttractionsPage extends HTMLElement {
 				<div class="attractions-list">
 
 					<div class="attractions-item">
-						<img src="pictures/Archive.jpg" alt="Archivio Storico">
+						<img src="attractions/Archive.jpg" alt="Archivio Storico">
 						<div class="details">
 							<h3>Archivio Storico della Città di Bolzano</h3>
 							<br>
@@ -118,7 +118,7 @@ class AttractionsPage extends HTMLElement {
 					</div>
 					
 					<div class="attractions-item">
-						<img src="pictures/Museum.png" alt="Archivio Storico">
+						<img src="attractions/Museum.png" alt="Archivio Storico">
 						<div class="details">
 							<h3>Museo Civico di Bolzano</h3>
 							<br>
@@ -134,7 +134,7 @@ class AttractionsPage extends HTMLElement {
 					</div>
 
 					<div class="attractions-item">
-						<img src="pictures/Galleria.jpg" alt="Piccola Galleria">
+						<img src="attractions/Galleria.jpg" alt="Piccola Galleria">
 						<div class="details">
 							<h3>Piccola Galleria</h3>
 							<br>
@@ -145,7 +145,7 @@ class AttractionsPage extends HTMLElement {
 					</div>
 
 					<div class="attractions-item">
-						<img src="pictures/SchoolMuseum.jpg" alt="Museo della Scuola">
+						<img src="attractions/SchoolMuseum.jpg" alt="Museo della Scuola">
 						<div class="details">
 							<h3>Museo della Scuola di Bolzano</h3>
 							<br>
@@ -157,7 +157,7 @@ class AttractionsPage extends HTMLElement {
 					</div>
 
 					<div class="attractions-item">
-						<img src="pictures/Vittoria.jpg" alt="Monumento alla Vittoria">
+						<img src="attractions/Vittoria.jpg" alt="Monumento alla Vittoria">
 						<div class="details">
 							<h3>Monumento alla Vittoria</h3>
 							<br>
@@ -168,7 +168,7 @@ class AttractionsPage extends HTMLElement {
 					</div>
 
 					<div class="attractions-item">
-						<img src="pictures/Gusen.jpg" alt="I "Sette di Gusen"">
+						<img src="attractions/Gusen.jpg" alt="I "Sette di Gusen"">
 						<div class="details">
 							<h3>I "Sette di Gusen"</h3>
 							<br>
