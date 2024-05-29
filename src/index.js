@@ -30,7 +30,6 @@ class MainPage extends HTMLElement {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-					background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pictures/Bolzano0.webp') center/cover repeat;
 				}
 			</style>
 
