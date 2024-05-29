@@ -302,7 +302,7 @@ After deploying the boilerplate the webcomponent files in the SRC will be bundle
  - install the webpack-cli (the tool used to run webpack on the command line)<br>
  `npm install webpack webpack-cli --save-dev`<br>
  <br>
- 
+
 ### Creating a bundle
 To test the webcomponent on docker you'll have first to bundle all your files and assets (ex: CSS, Images, Fonts) in a single JS file. <br>
 You can also see <b>[here](https://webpack.js.org/guides/asset-management) </b>the guide provided by Webapack on how to bundle assets.<br>
