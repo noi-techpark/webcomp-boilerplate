@@ -10,7 +10,7 @@ env:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
       - name: REUSE Compliance Check
@@ -22,7 +22,7 @@ jobs:
       - uses: noi-techpark/github-actions/webcomp-test@v2
 
   deploy-test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: github.ref == 'refs/heads/main'
     needs: test
     concurrency: deploy-test
@@ -40,7 +40,7 @@ jobs:
           version-tag: ${{github.sha}}
 
   deploy-prod:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: startsWith(github.ref, 'refs/tags/v')
     needs: test
     concurrency: deploy-prod
