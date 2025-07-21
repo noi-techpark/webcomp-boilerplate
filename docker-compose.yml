@@ -2,10 +2,9 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-version: "3.4"
 services:
   app:
-    image: node:14.15
+    image: node:22
     volumes:
       - ./:/code
     working_dir: /code
@@ -16,7 +15,7 @@ services:
 
   frontend:
     container_name: wcstore_frontend
-    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-frontend:latest
+    image: ghcr.io/noi-techpark/opendatahub-webcomponent-store/opendatahub-webcomponent-store-local-wcs-frontend:latest
     environment:
       HOST: 0.0.0.0
     env_file: .env
@@ -26,7 +25,7 @@ services:
 
   api:
     container_name: wcstore_api
-    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-api:latest
+    image: ghcr.io/noi-techpark/opendatahub-webcomponent-store/opendatahub-webcomponent-store-local-wcs-api:latest
     volumes:
       - ./workspace:/workspace
     env_file:
@@ -36,10 +35,14 @@ services:
     ports:
       - "${API_SERVER_PORT}:${API_SERVER_PORT}"
     tty: true
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
 
   cdn:
     container_name: wcstore_cdn
-    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cdn:latest
+    image: ghcr.io/noi-techpark/opendatahub-webcomponent-store/opendatahub-webcomponent-store-local-wcs-cdn:latest
     volumes:
       - ./workspace:/workspace
     env_file:
@@ -49,10 +52,14 @@ services:
     ports:
       - "${CDN_SERVER_PORT}:${CDN_SERVER_PORT}"
     tty: true
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
 
   postgres:
     container_name: wcstore_postgres
-    image: postgres:13
+    image: postgres:17
     ports:
       - "${PSQL_PORT}:5432"
     environment:
@@ -62,7 +69,7 @@ services:
 
   wcstore-cli:
     container_name: wcstore-cli
-    image: ghcr.io/noi-techpark/it.bz.opendatahub.webcomponents/it.bz.opendatahub.webcomponents-local-wcs-cli:latest
+    image: ghcr.io/noi-techpark/opendatahub-webcomponent-store/opendatahub-webcomponent-store-local-wcs-cli:latest
     env_file: .env
     command: ./wait-for -t 0 api:${API_SERVER_PORT} -- python webcompstore-cli.py --push ${WC_VERSION}
     depends_on:
