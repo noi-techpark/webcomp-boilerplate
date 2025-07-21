@@ -55,7 +55,7 @@ In the boilerplate it's integrated an hello world webcomponent ready to use. If 
 - `npm install`
 - `npm run build`
 - `cp .env.example .env`
-- `docker-compose up`
+- `docker compose up`
 
 In `localhost:8998` you'll see the hello world component and for testing live reload is available, so you can see the effect of your changes immediately.
 In `localhost:8999` you'll see the hello world component in the ODH webcomponent store, this is important for publishing, as it is vital your webcomponent works on the store.
@@ -372,7 +372,7 @@ These containers are there for the last step of testing if your new webcomp will
   `cp .env.example .env`
 - [Optional] Adjust port numbers in .env if they have conflicts with services already running on your machine
 - Start the store with: <br>
-  `docker-compose up -d`
+  `docker compose up -d`
 - Update the docker using the scripts commands of the webpack<br>
 ex :  `npm run build`
     > This command in our example will re-bundle your files and update the view on docker
@@ -383,11 +383,11 @@ ex :  `npm run build`
 - Access the store in your browser on: <br>
   `localhost:8999`
 
-Note: If you only want to start the webcomponent in the separated docker container without the webcomponent store, simply run `docker-compose up app -d`
+Note: If you only want to start the webcomponent in the separated docker container without the webcomponent store, simply run `docker compose up app -d`
 
 ### Publish a new version of your webcomponent
 - Increase version number WC_VERSION in your .env file
-- Then run: `docker-compose up wcstore-cli`
+- Then run: `docker compose up wcstore-cli`
 
 #### Stop the docker containers
 - `docker-compose stop`
