@@ -26,16 +26,19 @@ To encourage you and support you in the process of contributing to the store we 
     - [Modify the Package.json](#modify-the-packagejson)
   - [Installing Docker](#installing-docker)
     - [The docker containers](#the-docker-containers)
-      - [START:](#start)
-      - [Publish a new version of your webcomponent](#publish-a-new-version-of-your-webcomponent)
+      - [Option A: Standalone preview (quick iteration)](#option-a-standalone-preview-quick-iteration)
+      - [Option B: Full local webcomponent store (test store compatibility)](#option-b-full-local-webcomponent-store-test-store-compatibility)
+    - [Publish a new version of your webcomponent](#publish-a-new-version-of-your-webcomponent)
       - [Stop the docker containers](#stop-the-docker-containers)
+      - [Delete the docker containers from your machine](#delete-the-docker-containers-from-your-machine)
       - [Delete your webcomponents from the store](#delete-your-webcomponents-from-the-store)
 - [Test if your webcomp will run in the webcomp store](#test-if-your-webcomp-will-run-in-the-webcomp-store)
-  - [Test in a local docker instance of the webcomponent store](#test-in-a-local-docker-instance-of-the-webcomponent-store)
 - [Last Steps](#last-steps)
 - [Final requirements for submission](#final-requirements-for-submission)
   - [Submission](#submission)
+    - [License](#license)
     - [Support](#support)
+    - [REUSE](#reuse)
 
 # Create
 [Video guide: Introduction](https://vimeo.com/734001032)
@@ -367,47 +370,59 @@ Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally
 In the file `docker-compose.yml` you can see all the containers that will open on docker:<br>
 The first one called: `app` is the one that will show your webcomponent, all the other below are the necessary container for the open data hub Webcomponent store.
 These containers are there for the last step of testing if your new webcomp will be visible in the store.<br>
-#### START:
+There are two ways to test your webcomponent locally, both using `docker-compose.yml`:
+
+#### Option A: Standalone preview (quick iteration)
+
+The `app` container runs webpack-dev-server inside Docker and serves a demo page (`public/index.html`) that already includes your webcomponent. No build step or manual server setup required, just start the container.
+
 - Create a .env file: <br>
   `cp .env.example .env`
 - [Optional] Adjust port numbers in .env if they have conflicts with services already running on your machine
-- Start the store with: <br>
-  `docker compose up -d`
-- Update the docker using the scripts commands of the webpack<br>
-ex :  `npm run build`
-    > This command in our example will re-bundle your files and update the view on docker
-- Wait until the containers are running. You can check the current state with: <br>
-  `docker-compose logs --tail 500 -f`
-- Access webcomponent running in separated docker in your browser on: <br>
+- Start only the app container: <br>
+  `docker compose up app -d`
+- Access your webcomponent in your browser on: <br>
   `localhost:8998`
+
+Live reload is enabled, changes to `src/` are reflected immediately in the browser.
+
+#### Option B: Full local webcomponent store (test store compatibility)
+
+This starts a complete local copy of the Open Data Hub webcomponent store and registers your component in it. **Use this before submitting**, it verifies your component runs in the same environment as the real store.
+
+- Build your component first (the store needs the compiled file): <br>
+  `npm run build`
+- Create a .env file: <br>
+  `cp .env.example .env`
+- [Optional] Adjust port numbers in .env if they have conflicts with services already running on your machine
+- Start all containers: <br>
+  `docker compose up -d`
+- Wait until the containers are running. You can check the current state with: <br>
+  `docker compose logs --tail 500 -f`
+- Push your webcomponent into the local store: <br>
+  `docker compose up wcstore-cli`
 - Access the store in your browser on: <br>
   `localhost:8999`
 
-Note: If you only want to start the webcomponent in the separated docker container without the webcomponent store, simply run `docker compose up app -d`
-
 ### Publish a new version of your webcomponent
 - Increase version number WC_VERSION in your .env file
+- Run `npm run build`
 - Then run: `docker compose up wcstore-cli`
 
 #### Stop the docker containers
-- `docker-compose stop`
+- `docker compose stop`
 
 #### Delete the docker containers from your machine
-- `docker-compose down`
+- `docker compose down`
 
 #### Delete your webcomponents from the store
-- `[sudo] rm -f workspace`
-- `docker-compose down`
+- `[sudo] rm -rf workspace`
+- `docker compose down`
 
 # Test if your webcomp will run in the webcomp store
-The last step is to test if your web component will run on the Open Data Hub webcomponent store. This is a very important step, because we will not accept web components that won't work on our store.<br>
-For the docker commands please consult the paragraph above.
+The last step is to test if your web component will run on the Open Data Hub webcomponent store. This is a very important step, because we will not accept web components that won't work on our store.
 
-## Test in a local docker instance of the webcomponent store
-If you want to test the webcomponent on a local instance of the [webcomponent store](https://webcomponents.opendatahub.com/) to make sure that it will run correctly also on the real store.
-You can also access the webcomponent running in a simple separated docker container outside of the store.
-
-For accessing the webcomponent in a separated docker in the browser you will need a server (e.g. webpack dev-server) that is hosting a page which includes the webcomponent tag, as well as the script defining it. This page needs to be hosted on port 8080 as specified in your docker-compose file.
+Follow **Option B** from the Docker section above to start a local instance of the store and verify your component works correctly in it before submitting.
 
 # Last Steps
 [Video guide: How to publish your webcomponent](https://vimeo.com/734001003) <br>
