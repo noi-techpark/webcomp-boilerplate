@@ -8,7 +8,7 @@ SPDX-License-Identifier: CC0-1.0
 
 The webcomponent Boilerplate is the start to your project, and it contains a hello-world webcomp to show you how a basic one works and to give you a little help to start your amazing new webcomponent!
 This guide will aid you in the process of creating a valid web-component that has all the requisites necessary to be uploaded on the Open Data Hub Store.<br>
-To encourage you and support you in the process of contributing to the store we created a playlist of videos that explain each step, from start to finish.We will talk about starting from the boilerplate, what the files inside it do, how you have to use webpack and docker for your development process, and finally how to publish it on the ODH Web component store. <br>
+To encourage you and support you in the process of contributing to the store we created a playlist of videos that explain each step, from start to finish.We will talk about starting from the boilerplate, what the files inside it do, how you have to use webpack and docker for your development process, and finally how to publish it on the Open Data Hub Web component store. <br>
 [The complete guide in one video](https://vimeo.com/735835086)
 
 
@@ -61,7 +61,7 @@ In the boilerplate it's integrated an hello world webcomponent ready to use. If 
 - `docker compose up`
 
 In `localhost:8998` you'll see the hello world component and for testing live reload is available, so you can see the effect of your changes immediately.
-In `localhost:8999` you'll see the hello world component in the ODH webcomponent store, this is important for publishing, as it is vital your webcomponent works on the store.
+In `localhost:8999` you'll see the hello world component in the Open Data Hub webcomponent store, this is important for publishing, as it is vital your webcomponent works on the store.
 
 ## Modify the file wcs-manifest.json
 [Video guide: What is the manifest.json?](https://vimeo.com/734001138)<br>
@@ -426,14 +426,14 @@ Follow **Option B** from the Docker section above to start a local instance of t
 
 # Last Steps
 [Video guide: How to publish your webcomponent](https://vimeo.com/734001003) <br>
-- Delete the containers of the ODH store in the `docker-compose.yml` file (every container except `app`- the first one)
+- Delete the containers of the Open Data Hub store in the `docker-compose.yml` file (every container except `app`- the first one)
 - Modify the `README.example.md` to create the README file of your webcomp and then delete the one of the Boilerplate.
 
 # Final requirements for submission
 - One single js file
 - Assets like css or images need to be lazy loaded or bundled into the single js file with https://webpack.js.org/
 - A screenshot of the webcomponent that will be used as a thumbnail in the webcomponent store front-page. The filename should be “wcs-logo.png” and it should be placed in the image tag of the wcs-manifest.json like “image”: “wcs-logo.png”
--The webcomponent should be visible and work in the ODH Webcomponent store (docker test)
+-The webcomponent should be visible and work in the Open Data Hub Webcomponent store (docker test)
 
 ## Submission
 - Create a pull request against the repository you asked at the beggining of your project to the [help@opendatahub.com](mailto:help@opendatahub.com)
