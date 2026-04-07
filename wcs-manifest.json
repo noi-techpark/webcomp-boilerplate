@@ -15,10 +15,10 @@
   ],
   "authors": [
     {
-      "name": "...",
-      "email": "...",
-      "organization": "...",
-      "organizationUrl": "..."
+      "name": "Name",
+      "email": "email@example.com",
+      "organization": "Organization Name",
+      "organizationUrl": "https://example.com"
     }
   ],
   "image": "wcs-logo.png",
